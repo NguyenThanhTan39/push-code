@@ -1,8 +1,14 @@
-﻿namespace CS_List;
+﻿using System;
 
-class Program
+namespace CS_List
+{
+    class Program
 {
     static void Main(string[] args)
     {
+        Console.WriteLine("hello world");
     }
 }
+}
+
+
