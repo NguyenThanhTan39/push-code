@@ -1,0 +1,14 @@
+/Users/nguyenthanhtan/Desktop/CS_List/bin/Debug/net8.0/CS_List
+/Users/nguyenthanhtan/Desktop/CS_List/bin/Debug/net8.0/CS_List.deps.json
+/Users/nguyenthanhtan/Desktop/CS_List/bin/Debug/net8.0/CS_List.runtimeconfig.json
+/Users/nguyenthanhtan/Desktop/CS_List/bin/Debug/net8.0/CS_List.dll
+/Users/nguyenthanhtan/Desktop/CS_List/bin/Debug/net8.0/CS_List.pdb
+/Users/nguyenthanhtan/Desktop/CS_List/obj/Debug/net8.0/CS_List.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nguyenthanhtan/Desktop/CS_List/obj/Debug/net8.0/CS_List.AssemblyInfoInputs.cache
+/Users/nguyenthanhtan/Desktop/CS_List/obj/Debug/net8.0/CS_List.AssemblyInfo.cs
+/Users/nguyenthanhtan/Desktop/CS_List/obj/Debug/net8.0/CS_List.csproj.CoreCompileInputs.cache
+/Users/nguyenthanhtan/Desktop/CS_List/obj/Debug/net8.0/CS_List.dll
+/Users/nguyenthanhtan/Desktop/CS_List/obj/Debug/net8.0/refint/CS_List.dll
+/Users/nguyenthanhtan/Desktop/CS_List/obj/Debug/net8.0/CS_List.pdb
+/Users/nguyenthanhtan/Desktop/CS_List/obj/Debug/net8.0/CS_List.genruntimeconfig.cache
+/Users/nguyenthanhtan/Desktop/CS_List/obj/Debug/net8.0/ref/CS_List.dll
