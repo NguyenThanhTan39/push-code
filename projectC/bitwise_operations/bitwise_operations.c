@@ -6,9 +6,9 @@ int main()
 
     unsigned int b = 13;
 
-    int c = 0;
+    int c = 10;
 
-    c = a&b;
+    c&=2;
 
     printf("Line 1 - value of c is %d\n",c);
 
