@@ -1,0 +1,15 @@
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Async_Await/bin/Debug/net8.0/CS_Async_Await
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Async_Await/bin/Debug/net8.0/CS_Async_Await.deps.json
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Async_Await/bin/Debug/net8.0/CS_Async_Await.runtimeconfig.json
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Async_Await/bin/Debug/net8.0/CS_Async_Await.dll
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Async_Await/bin/Debug/net8.0/CS_Async_Await.pdb
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Async_Await/obj/Debug/net8.0/CS_Async_Await.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Async_Await/obj/Debug/net8.0/CS_Async_Await.AssemblyInfoInputs.cache
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Async_Await/obj/Debug/net8.0/CS_Async_Await.AssemblyInfo.cs
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Async_Await/obj/Debug/net8.0/CS_Async_Await.csproj.CoreCompileInputs.cache
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Async_Await/obj/Debug/net8.0/CS_Async_Await.sourcelink.json
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Async_Await/obj/Debug/net8.0/CS_Async_Await.dll
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Async_Await/obj/Debug/net8.0/refint/CS_Async_Await.dll
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Async_Await/obj/Debug/net8.0/CS_Async_Await.pdb
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Async_Await/obj/Debug/net8.0/CS_Async_Await.genruntimeconfig.cache
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Async_Await/obj/Debug/net8.0/ref/CS_Async_Await.dll
