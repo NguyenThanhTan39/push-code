@@ -1,0 +1,15 @@
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Type/bin/Debug/net8.0/CS_Type
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Type/bin/Debug/net8.0/CS_Type.deps.json
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Type/bin/Debug/net8.0/CS_Type.runtimeconfig.json
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Type/bin/Debug/net8.0/CS_Type.dll
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Type/bin/Debug/net8.0/CS_Type.pdb
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Type/obj/Debug/net8.0/CS_Type.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Type/obj/Debug/net8.0/CS_Type.AssemblyInfoInputs.cache
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Type/obj/Debug/net8.0/CS_Type.AssemblyInfo.cs
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Type/obj/Debug/net8.0/CS_Type.csproj.CoreCompileInputs.cache
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Type/obj/Debug/net8.0/CS_Type.sourcelink.json
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Type/obj/Debug/net8.0/CS_Type.dll
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Type/obj/Debug/net8.0/refint/CS_Type.dll
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Type/obj/Debug/net8.0/CS_Type.pdb
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Type/obj/Debug/net8.0/CS_Type.genruntimeconfig.cache
+/Users/nguyenthanhtan/Desktop/All_code/push-code/projectCsharp/CS_Type/obj/Debug/net8.0/ref/CS_Type.dll
