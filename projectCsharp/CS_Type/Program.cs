@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Reflection;
+using ChoViDu;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
 namespace CS_Type
 {
@@ -44,7 +48,27 @@ namespace CS_Type
                 foreach (var attr in property.GetCustomAttributes(false))
                 {
                     MotaAttribute mota = attr as MotaAttribute;
-                    if (mota!=null) Console.WriteLine($"{mota.GetType().Name}: {mota.Notice}");  
+                    if (mota!=null) Console.WriteLine($"{property.Name, 13}: {mota.Notice}");  
+                }
+            }
+            Profile  profiles = new Profile()
+            {
+                Name = "Ta",
+                Age = 10,
+                PhoneNumber = "010101",
+                Email = "nguyenthanhtan"
+            };
+            ValidationContext context = new ValidationContext(profiles, null, null);
+            List<ValidationResult> results = new List<ValidationResult>();
+            bool valid = Validator.TryValidateObject(profiles,context,results,true);
+            if (!valid)
+            {
+                foreach (var vr in results)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write($"{vr.MemberNames.First(), 13}: ");
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine($"{vr.ErrorMessage}");
                 }
             }
         }
