@@ -1,0 +1,14 @@
+/Users/nguyenthanhtan/Desktop/All_code/CS_LinQ/bin/Debug/net8.0/CS_LinQ
+/Users/nguyenthanhtan/Desktop/All_code/CS_LinQ/bin/Debug/net8.0/CS_LinQ.deps.json
+/Users/nguyenthanhtan/Desktop/All_code/CS_LinQ/bin/Debug/net8.0/CS_LinQ.runtimeconfig.json
+/Users/nguyenthanhtan/Desktop/All_code/CS_LinQ/bin/Debug/net8.0/CS_LinQ.dll
+/Users/nguyenthanhtan/Desktop/All_code/CS_LinQ/bin/Debug/net8.0/CS_LinQ.pdb
+/Users/nguyenthanhtan/Desktop/All_code/CS_LinQ/obj/Debug/net8.0/CS_LinQ.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nguyenthanhtan/Desktop/All_code/CS_LinQ/obj/Debug/net8.0/CS_LinQ.AssemblyInfoInputs.cache
+/Users/nguyenthanhtan/Desktop/All_code/CS_LinQ/obj/Debug/net8.0/CS_LinQ.AssemblyInfo.cs
+/Users/nguyenthanhtan/Desktop/All_code/CS_LinQ/obj/Debug/net8.0/CS_LinQ.csproj.CoreCompileInputs.cache
+/Users/nguyenthanhtan/Desktop/All_code/CS_LinQ/obj/Debug/net8.0/CS_LinQ.dll
+/Users/nguyenthanhtan/Desktop/All_code/CS_LinQ/obj/Debug/net8.0/refint/CS_LinQ.dll
+/Users/nguyenthanhtan/Desktop/All_code/CS_LinQ/obj/Debug/net8.0/CS_LinQ.pdb
+/Users/nguyenthanhtan/Desktop/All_code/CS_LinQ/obj/Debug/net8.0/CS_LinQ.genruntimeconfig.cache
+/Users/nguyenthanhtan/Desktop/All_code/CS_LinQ/obj/Debug/net8.0/ref/CS_LinQ.dll
