@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 370" width="100%" height="100%">
+  <defs>
+    <marker id="arrow-indigo" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#3F51B5" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2E7D32" />
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <rect width="1140" height="370" fill="#FFFFFF" rx="8" />
+
+  <!-- Subgraph 1: PC -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="30" width="310" height="305" rx="10" fill="#F8F9FE" stroke="#3F51B5" stroke-width="2" />
+    <rect x="30" y="30" width="310" height="34" rx="10" fill="#3F51B5" />
+    <rect x="30" y="54" width="310" height="10" fill="#3F51B5" />
+    <text x="185" y="53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Computer (Desktop App)</text>
+
+    <!-- Node User -->
+    <rect x="55" y="85" width="260" height="70" rx="8" fill="#E0F7FA" stroke="#0097A7" stroke-width="1.5" />
+    <text x="185" y="113" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#004D40" text-anchor="middle">User Input</text>
+    <text x="185" y="135" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#00695C" text-anchor="middle">Click 'On' / 'Off' or Custom Cmd</text>
+
+    <!-- Edge User to GUI -->
+    <path d="M 185 155 L 185 185" fill="none" stroke="#3F51B5" stroke-width="1.5" marker-end="url(#arrow-indigo)" />
+
+    <!-- Node Qt GUI -->
+    <rect x="55" y="190" width="260" height="120" rx="8" fill="#FFFFFF" stroke="#3F51B5" stroke-width="2" />
+    <text x="185" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#1A237E" text-anchor="middle">Qt GUI Application (C++)</text>
+    <text x="185" y="240" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#283593" text-anchor="middle">QLineEdit &amp; QTextEdit Log</text>
+    <text x="185" y="260" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#3949AB" text-anchor="middle">QSerialPort Manager</text>
+    <text x="185" y="280" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#1A237E" text-anchor="middle">Baudrate: 9600 bps</text>
+  </g>
+
+  <!-- Node 3: Communication Cable -->
+  <g filter="url(#shadow)">
+    <rect x="415" y="125" width="260" height="110" rx="8" fill="#FFF8E1" stroke="#FFA000" stroke-width="2" />
+    <text x="545" y="156" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#FF6F00" text-anchor="middle">USB Serial Cable</text>
+    <text x="545" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#FF8F00" text-anchor="middle">UART / COM Port</text>
+    <text x="545" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#E65100" text-anchor="middle">Baudrate: 9600 bps</text>
+    <text x="545" y="218" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#E65100" text-anchor="middle">Full-Duplex (TX / RX)</text>
+  </g>
+
+  <!-- Arrow TX: Qt GUI to Cable -->
+  <path d="M 315 225 L 365 225 L 365 165 L 407 165" fill="none" stroke="#3F51B5" stroke-width="2" marker-end="url(#arrow-indigo)" />
+  <text x="365" y="150" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#3F51B5" text-anchor="middle">TX: Cmd</text>
+
+  <!-- Arrow RX: Cable to Qt GUI -->
+  <path d="M 415 200 L 365 200 L 365 260 L 323 260" fill="none" stroke="#2E7D32" stroke-width="2" marker-end="url(#arrow-green)" />
+  <text x="365" y="278" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#2E7D32" text-anchor="middle">RX: Log</text>
+
+  <!-- Subgraph 2: Hardware Arduino Uno R3 -->
+  <g filter="url(#shadow)">
+    <rect x="750" y="30" width="355" height="305" rx="10" fill="#FFFDF8" stroke="#F57C00" stroke-width="2" />
+    <rect x="750" y="30" width="355" height="34" rx="10" fill="#F57C00" />
+    <rect x="750" y="54" width="355" height="10" fill="#F57C00" />
+    <text x="927" y="53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Arduino Uno R3</text>
+
+    <!-- Node Arduino MCU -->
+    <rect x="775" y="85" width="305" height="95" rx="8" fill="#FFFFFF" stroke="#F57C00" stroke-width="2" />
+    <text x="927" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#E65100" text-anchor="middle">Arduino Uno R3 (ATmega328P)</text>
+    <text x="927" y="138" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#EF6C00" text-anchor="middle">Serial Event &amp; Command Parser</text>
+    <text x="927" y="158" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#D84315" text-anchor="middle">Check String: 'On' / 'Off'</text>
+
+    <!-- Arrow MCU to LED -->
+    <path d="M 927 180 L 927 207" fill="none" stroke="#2E7D32" stroke-width="2" marker-end="url(#arrow-green)" />
+    <text x="965" y="198" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#2E7D32">Control</text>
+
+    <!-- Node LED -->
+    <rect x="775" y="215" width="305" height="90" rx="8" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" />
+    <text x="927" y="244" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#1B5E20" text-anchor="middle">Built-in LED Indicator</text>
+    <text x="927" y="267" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#2E7D32" text-anchor="middle">Connected to Digital Pin 13</text>
+    <text x="927" y="286" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#1B5E20" text-anchor="middle">HIGH = ON, LOW = OFF</text>
+  </g>
+
+  <!-- Arrow Cable to MCU -->
+  <path d="M 675 160 L 725 160 L 725 125 L 767 125" fill="none" stroke="#3F51B5" stroke-width="2" marker-end="url(#arrow-indigo)" />
+
+  <!-- Arrow MCU to Cable -->
+  <path d="M 775 155 L 725 155 L 725 195 L 683 195" fill="none" stroke="#2E7D32" stroke-width="2" marker-end="url(#arrow-green)" />
+  <text x="725" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#2E7D32" text-anchor="middle">Response</text>
+</svg>

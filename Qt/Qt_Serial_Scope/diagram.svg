@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1190 370" width="100%" height="100%">
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0288D1" />
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#F57C00" />
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#512DA8" />
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <rect width="1190" height="370" fill="#FFFFFF" rx="8" />
+
+  <!-- Subgraph 1: Analog Source -->
+  <g filter="url(#shadow)">
+    <rect x="25" y="30" width="245" height="305" rx="10" fill="#F4FAFD" stroke="#0288D1" stroke-width="2" />
+    <rect x="25" y="30" width="245" height="34" rx="10" fill="#0288D1" />
+    <rect x="25" y="54" width="245" height="10" fill="#0288D1" />
+    <text x="147" y="53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Analog Signal Source</text>
+
+    <!-- Node Potentiometer -->
+    <rect x="47" y="105" width="200" height="135" rx="8" fill="#FFFFFF" stroke="#0288D1" stroke-width="1.5" />
+    <text x="147" y="138" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#01579B" text-anchor="middle">Potentiometer</text>
+    <text x="147" y="163" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#0288D1" text-anchor="middle">Variable Voltage Source</text>
+    <text x="147" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#0288D1" text-anchor="middle">Analog Output Signal</text>
+    <text x="147" y="208" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#039BE5" text-anchor="middle">0.0V - 5.0V DC</text>
+  </g>
+
+  <!-- Arrow Potentiometer to Arduino -->
+  <path d="M 270 172 L 318 172" fill="none" stroke="#0288D1" stroke-width="2" marker-end="url(#arrow-blue)" />
+  <text x="294" y="160" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#0288D1" text-anchor="middle">Pin A0</text>
+
+  <!-- Subgraph 2: Arduino Uno R3 -->
+  <g filter="url(#shadow)">
+    <rect x="325" y="30" width="275" height="305" rx="10" fill="#FFFDF8" stroke="#F57C00" stroke-width="2" />
+    <rect x="325" y="30" width="275" height="34" rx="10" fill="#F57C00" />
+    <rect x="325" y="54" width="275" height="10" fill="#F57C00" />
+    <text x="462" y="53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Arduino Uno R3</text>
+
+    <!-- Node Sample -->
+    <rect x="347" y="85" width="230" height="85" rx="8" fill="#FFFFFF" stroke="#F57C00" stroke-width="1.5" />
+    <text x="462" y="113" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#E65100" text-anchor="middle">ADC Sampling (Pin A0)</text>
+    <text x="462" y="136" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#EF6C00" text-anchor="middle">Sampling Period: 50ms</text>
+    <text x="462" y="154" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#EF6C00" text-anchor="middle">Frequency: 20Hz (millis)</text>
+
+    <!-- Arrow Sample to Calc -->
+    <path d="M 462 170 L 462 195" fill="none" stroke="#F57C00" stroke-width="1.5" marker-end="url(#arrow-orange)" />
+
+    <!-- Node Calc -->
+    <rect x="347" y="202" width="230" height="105" rx="8" fill="#FFFFFF" stroke="#F57C00" stroke-width="1.5" />
+    <text x="462" y="228" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#E65100" text-anchor="middle">Voltage Calculation</text>
+    <text x="462" y="251" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#D84315" text-anchor="middle">Volt = Raw * 5.0 / 1023</text>
+    <text x="462" y="271" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#EF6C00" text-anchor="middle">Format: Float String</text>
+    <text x="462" y="289" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#E65100" text-anchor="middle">Stream over Serial Port</text>
+  </g>
+
+  <!-- Node Cable -->
+  <g filter="url(#shadow)">
+    <rect x="645" y="130" width="215" height="105" rx="8" fill="#FFF8E1" stroke="#FFA000" stroke-width="2" />
+    <text x="752" y="161" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#FF6F00" text-anchor="middle">USB Serial Cable</text>
+    <text x="752" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#FF8F00" text-anchor="middle">UART / COM Port</text>
+    <text x="752" y="203" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#E65100" text-anchor="middle">Baudrate: 9600 bps</text>
+    <text x="752" y="221" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#E65100" text-anchor="middle">Rate: 20 packets/sec</text>
+  </g>
+
+  <!-- Arrow Arduino to Cable -->
+  <path d="M 577 240 L 610 240 L 610 182 L 638 182" fill="none" stroke="#FFA000" stroke-width="2" marker-end="url(#arrow-orange)" />
+
+  <!-- Arrow Cable to Qt -->
+  <path d="M 860 182 L 892 182" fill="none" stroke="#512DA8" stroke-width="2" marker-end="url(#arrow-purple)" />
+
+  <!-- Subgraph 3: Qt App -->
+  <g filter="url(#shadow)">
+    <rect x="900" y="30" width="265" height="305" rx="10" fill="#FAF8FE" stroke="#512DA8" stroke-width="2" />
+    <rect x="900" y="30" width="265" height="34" rx="10" fill="#512DA8" />
+    <rect x="900" y="54" width="265" height="10" fill="#512DA8" />
+    <text x="1032" y="53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Qt Scope Desktop App</text>
+
+    <!-- Node Read -->
+    <rect x="920" y="85" width="225" height="85" rx="8" fill="#FFFFFF" stroke="#512DA8" stroke-width="1.5" />
+    <text x="1032" y="113" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#311B92" text-anchor="middle">Serial Data Receiver</text>
+    <text x="1032" y="136" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#4527A0" text-anchor="middle">QSerialPort::readyRead</text>
+    <text x="1032" y="154" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#4527A0" text-anchor="middle">Parse String to Double</text>
+
+    <!-- Arrow Read to Charts -->
+    <path d="M 1032 170 L 1032 195" fill="none" stroke="#512DA8" stroke-width="1.5" marker-end="url(#arrow-purple)" />
+
+    <!-- Node Charts -->
+    <rect x="920" y="202" width="225" height="105" rx="8" fill="#E0F2F1" stroke="#00897B" stroke-width="2" />
+    <text x="1032" y="228" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#004D40" text-anchor="middle">QtCharts (QSplineSeries)</text>
+    <text x="1032" y="251" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#00695C" text-anchor="middle">10s Sliding Window</text>
+    <text x="1032" y="271" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#00796B" text-anchor="middle">Buffer Cap: 300 Points</text>
+    <text x="1032" y="289" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#004D40" text-anchor="middle">Real-Time Waveform Display</text>
+  </g>
+</svg>

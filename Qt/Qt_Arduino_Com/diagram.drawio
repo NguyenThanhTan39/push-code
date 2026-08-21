@@ -1,0 +1,69 @@
+<mxfile host="app.diagrams.net" version="21.0.0">
+  <diagram id="Qt_Arduino_Com_BlockDiagram" name="Block Diagram">
+    <mxGraphModel dx="1200" dy="750" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group_pc" value="Computer (Desktop Application)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e8eaf6;strokeColor=#3f51b5;fontColor=#1a237e;fontSize=13;startSize=26;" vertex="1" parent="1">
+          <mxGeometry x="30" y="60" width="310" height="305" as="geometry" />
+        </mxCell>
+        <mxCell id="node_user" value="&lt;b&gt;User Input&lt;/b&gt;&lt;br&gt;Click 'On' / 'Off' or Custom Cmd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f7fa;strokeColor=#0097a7;strokeWidth=2;fontColor=#004d40;fontSize=12;" vertex="1" parent="group_pc">
+          <mxGeometry x="25" y="40" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="node_gui" value="&lt;b&gt;Qt GUI Application (C++)&lt;/b&gt;&lt;br&gt;QLineEdit &amp;amp; QTextEdit Log&lt;br&gt;QSerialPort Manager&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Baudrate: 9600 bps&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#3f51b5;strokeWidth=2;fontColor=#1a237e;fontSize=12;" vertex="1" parent="group_pc">
+          <mxGeometry x="25" y="145" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_user_gui" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3f51b5;strokeWidth=2;" edge="1" parent="group_pc" source="node_user" target="node_gui">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node_bus" value="&lt;b&gt;USB Serial Cable&lt;/b&gt;&lt;br&gt;UART / COM Port&lt;br&gt;Baudrate: 9600 bps&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Full-Duplex (TX / RX)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#ffa000;strokeWidth=2;fontColor=#ff6f00;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="415" y="155" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_tx" value="TX: Cmd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3f51b5;strokeWidth=2;fontColor=#3f51b5;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" edge="1" parent="1" source="node_gui" target="node_bus">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="365" y="265" />
+              <mxPoint x="365" y="188" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_rx_bus" value="RX: Log" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#388e3c;strokeWidth=2;fontColor=#388e3c;fontSize=11;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="node_bus" target="node_gui">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="365" y="232" />
+              <mxPoint x="365" y="295" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="group_hardware" value="Arduino Uno R3" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#f57c00;fontColor=#e65100;fontSize=13;startSize=26;" vertex="1" parent="1">
+          <mxGeometry x="750" y="60" width="355" height="305" as="geometry" />
+        </mxCell>
+        <mxCell id="node_mcu" value="&lt;b&gt;Arduino Uno R3 (ATmega328P)&lt;/b&gt;&lt;br&gt;Serial Event &amp;amp; Command Parser&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Check String: 'On' / 'Off'&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#f57c00;strokeWidth=2;fontColor=#e65100;fontSize=12;" vertex="1" parent="group_hardware">
+          <mxGeometry x="25" y="45" width="305" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="node_led" value="&lt;b&gt;Built-in LED Indicator&lt;/b&gt;&lt;br&gt;Connected to Digital Pin 13&lt;br&gt;&lt;font size=&quot;1&quot;&gt;HIGH = ON, LOW = OFF&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#388e3c;strokeWidth=2;fontColor=#1b5e20;fontSize=12;" vertex="1" parent="group_hardware">
+          <mxGeometry x="25" y="180" width="305" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_mcu_led" value="Control" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#388e3c;strokeWidth=2;fontColor=#388e3c;fontSize=11;" edge="1" parent="group_hardware" source="node_mcu" target="node_led">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_bus_mcu" value="Read Cmd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#f57c00;strokeWidth=2;fontColor=#f57c00;fontSize=11;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node_bus" target="node_mcu">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="715" y="188" />
+              <mxPoint x="715" y="153" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_mcu_resp" value="Response" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#388e3c;strokeWidth=2;fontColor=#388e3c;fontSize=11;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.7;entryDx=0;entryDy=0;" edge="1" parent="1" source="node_mcu" target="node_bus">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="715" y="176" />
+              <mxPoint x="715" y="232" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

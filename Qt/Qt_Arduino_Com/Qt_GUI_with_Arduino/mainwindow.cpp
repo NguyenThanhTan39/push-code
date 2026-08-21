@@ -69,4 +69,3 @@ void MainWindow::Read_Data()
         }
     }
 }
-
